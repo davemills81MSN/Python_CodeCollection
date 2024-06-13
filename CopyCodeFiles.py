@@ -3,7 +3,7 @@ import sys
 import pyperclip
 import re
 
-SENSITIVE_KEYS = ["key", "clientsecret", "password", "pwd", "issuer", "audience","domain","clientid","tenantdd"]
+SENSITIVE_KEYS = ["key", "clientsecret", "password", "pwd", "issuer", "audience","domain","clientid","tenantdd","tenantid"]
 
 def mask_sensitive_values(content):
     pattern = r'"(' + '|'.join(SENSITIVE_KEYS) + r')":\s*"([^"]*)"'
